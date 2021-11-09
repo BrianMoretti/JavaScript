@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slider</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var i = 0; 
+		var images = [];
+		var time = 3000;
+//Lista de imagenes
+images[0] = 'images0.png';
+images[1] = 'images1.png';
+images[2] = 'images2.png';
+function changeImg(){
+	document.slide.src = images[i];
+	if (i < images.length - 1) {
+		i++;
+	}else{
+		i=0;
+	}
+	setTimeout("changeImg()",time);
+}
+window.onload=changeImg;
+
+	</script>
+
+<img src="" name="slide" width="400" height="200">
+
+
+</body>
+</html>
